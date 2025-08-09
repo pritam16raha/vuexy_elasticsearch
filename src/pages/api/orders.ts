@@ -1,5 +1,3 @@
-// pages/api/orders.ts
-
 import { Client } from '@elastic/elasticsearch'
 
 const client = new Client({
@@ -14,8 +12,8 @@ export default async function handler(req: any, res: any) {
   try {
     const resp = await client.search({
       index: 'orders',
-      size: 200,                        // adjust if you have more
-      sort: [{ created_at: 'desc' }],   // newest first
+      size: 200,
+      sort: [{ created_at: 'desc' }],
       _source: [
         'order_id',
         'country',

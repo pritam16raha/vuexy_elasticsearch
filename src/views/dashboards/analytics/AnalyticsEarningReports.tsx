@@ -16,7 +16,6 @@ import ReactApexcharts from 'src/@core/components/react-apexcharts'
 import { useEffect, useState } from 'react'
 import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
 
-
 const StyledGrid = styled(Grid)<GridProps>(({ theme }) => ({
   [theme.breakpoints.up('sm')]: {
     paddingTop: '0 !important'
